@@ -1,38 +1,131 @@
+@import url('https://fonts.googleapis.com/css2?family=Karla:wght@300;400;500;600;700&family=Markazi+Text:wght@400;500;600;700&display=swap');
+
+*,*::before,*::after{
+	box-sizing:border-box;
+    border:none;
+    outline:none;
+    margin:0;
+    padding:0;
+}
+
+:root {
+  --primary-green: #495E57;
+  --primary-gold: #F4CE14;
+  --highlight-white: #EDEFEE;
+  --karla: "Karla", sans-serif;
+  --markazi: "Markazi Text", serif;
+}
+
+body{
+  font-family: var(--karla);
+}
+
 .App {
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+Header {
+  position: relative;
   display: flex;
   flex-direction: column;
+  background-color: var(--highlight-white);
+  justify-content: space-between;
+  padding: 1em;
+}
+.logo {
+  position: relative;
+  display: flex;
+  width: 10rem;
+}
+
+h1 {
+  font-family: var(--markazi);
+  font-size: 2em;
+  font-weight: 400;
+  color: var(--primary-gold);
+}
+
+h2 {
+  font-family: var(--markazi);
+  font-size: 1.5em;
+  font-weight: 400;
+  color: var(--highlight-white);
+}
+
+h3 {
+  font-family: var(--markazi);
+  font-size: 2em;
+  font-weight: 400;
+  color: #333;
+}
+
+p {
+  font-family: var(--karla);
+  font-size: 1.1em;
+  padding: 0 0 1em 0;
+}
+
+nav {
+  display: flex;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+}
+nav li {
+  display: flex;
+  justify-content: space-between;
+  margin: 0 0 0 2em;
+}
+nav li a {
+  color: #333333;
+  font-weight: 500;
+  text-decoration: none;
 }
 
-.App-link {
-  color: #61dafb;
+button {
+  background-color: var(--primary-gold);
+  color: #333;
+  font-weight: 600;
+  border: none;
+  border-radius: 16px;
+  padding: 0.65em 1em;
+  cursor: pointer;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.hero{
+  position: relative;
+  background-color: var(--primary-green);
+  width: 100%;
+  padding: 1em;
 }
+
+.specials img {
+  position: relative;
+  width: 100%;
+}
+
+section {
+  padding: 1em;
+}
+
+/* DESKTOP */
+@media screen and (min-width:768px) {
+  Header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 1em;
+  }
+
+  nav li {
+    display: inline-flex;
+    justify-content: space-between;
+    margin: 0 0 0 2em;
+  }
+
+  .specials {
+    display: inline-grid;
+    grid-template-columns: auto auto auto;
+    grid-gap: 20px;
+  }
+
+}
+
