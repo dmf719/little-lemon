@@ -1,10 +1,18 @@
 import Logo from './assets/Logo.svg';
+import Home from './assets/homeIcon.svg';
+import Hamburger from './assets/hamburgerMenu.svg';
+import Basket from './assets/basket .svg';
+import Nav from './Nav'
 
 function Header(){
     return (
         <header>
-          <img className="logo" src={Logo} alt="Little Lemon Logo" />
-          <nav>
+          <div>
+            <img className="menu" src={Hamburger} onClick={Nav}/>
+            <img className="logo" src={Logo} alt="Little Lemon Logo" />
+            <img className="basket" src={Basket} />
+          </div>
+          <nav id="navbar">
             <ul>
               <li><a href="">Home</a></li>
               <li><a href="">About</a></li>
