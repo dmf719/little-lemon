@@ -1,0 +1,94 @@
+/* HEADER */
+header {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    background-color: var(--highlight-white);
+    justify-content: space-between;
+    align-items: center;
+    padding: 1em;
+}
+
+header div {
+    position: relative;
+    width: 100%;
+    display: inline-grid;
+    grid-template-columns: 15% 70% 15%;
+    align-items: center;
+    justify-items: center;
+}
+.logo {
+    position: relative;
+    display: flex;
+    width: 10rem;
+    cursor: pointer;
+}
+
+.menu {
+    display: flex;
+    width: 2rem;
+    cursor: pointer;
+}
+
+.basket {
+    display: flex;
+    width: 2rem;
+    cursor: pointer;
+}
+
+#navbar {
+    display: none;
+    transition: all ease 2s;
+}
+#navbar.show {
+    display: block;
+    height: 280px;
+    transition: all ease 2s;
+    animation: drop 1s 1;
+}
+@keyframes drop {
+    from {height: 0px;}
+    to {height: 280px;}
+}
+#navbar li {
+    text-align: center;
+    margin: .5em 0 1em 0;
+}
+#navbar li a {
+    color: var(--highlight-charcoal);
+    font-size: 1.5rem;
+    font-weight: 500;
+    text-decoration: none;
+}
+
+/* DESKTOP */
+@media screen and (min-width:768px) {
+    header {
+      width: 100%;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      padding: 1em 15%;
+    }
+    header div {
+      position: relative;
+      width: auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-evenly;
+    }
+    .menu, .basket {
+      display: none;
+    }
+    #navbar {
+      display: flex;
+    }
+    #navbar li {
+      display: inline-flex;
+      justify-content: space-between;
+      margin: 0 0 0 2em;
+    }
+    #navbar li a {
+      font-size: 1rem;
+     }
+}

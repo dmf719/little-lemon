@@ -1,4 +1,10 @@
 import './App.css';
+import './Header.css';
+import './Hero.css';
+import './Specials.css';
+import './Testimonials.css';
+import './About.css';
+import './Footer.css';
 import Header from './Header';
 import Hero from './Hero';
 import Specials from './Specials';

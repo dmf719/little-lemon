@@ -36,11 +36,11 @@ export default function Testimonials() {
                 return (
                     <section>
                         <div>
-                            <img src={review.avatar} className='avatar'/>
+                            <img src={review.avatar} className='avatar' alt={review.username} />
                         </div>
                         <div>
-                            <h3>{review.username}</h3>
-                            <p>{review.comment}</p>
+                            <h4>{review.username}</h4>
+                            <p>"{review.comment}"</p>
                         </div>
                     </section>
                 )

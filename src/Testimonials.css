@@ -1,0 +1,43 @@
+/* TESTIMONIALS */
+.testimonials {
+    position: relative;
+    display: grid;
+    grid-template-columns: 49% 49%;
+    align-items: start;
+    gap: .5rem;
+}
+
+.testimonials section {
+    position: relative;
+    display: grid;
+    grid-template-columns: 40% 50%;
+    justify-content: space-between;
+    align-items: center;
+    border: 1px solid #edeffe;
+    border-radius: 16px;
+    padding: 10%;
+}
+
+.testimonials p {
+    font-size: 0.85rem;
+}
+
+.avatar {
+    position: relative;
+    width: 100%;
+    border-radius: 50%;
+}
+
+@media screen and (min-width: 768px) {
+    .testimonials {
+        position: relative;
+        width: 100%;
+        display: grid;
+        grid-template-columns: repeat(4, 24%);
+        align-items: start;
+        padding: 0 15%;
+    }
+    .testimonials section {
+        padding: 5%;
+    }
+}

@@ -1,0 +1,86 @@
+/* SPECIALS SECTION */
+.specialsHeader {
+    display: flex;
+    flex-direction: row;
+    background-color: #FFFFFF;
+}
+.specials section {
+    display: flexbox;
+    flex-direction: row;
+    margin: 0 0 1em 0;
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0px 2px 5px #a5a5a5;
+    background-color: var(--highlight-white);
+}
+.thumbnail {
+    max-height: 250px;
+    overflow: hidden;
+}
+
+.specials .description {
+    display: grid;
+    grid-template-rows: 20% 50% 30%;
+    grid-template-columns: 80% 20%;
+    grid-template-areas:
+        "name price"
+        "desc desc"
+        "link link"
+    ;
+    justify-content: space-around;
+    align-items: center;
+    min-height: 220px;
+    padding: 1em;
+}
+
+.description h3 {
+    position: relative;
+    font-size: 1.8em;
+    grid-area: name;
+}
+.price {
+    color: var(--secondary-salmon);
+    grid-area: price;
+    position: relative;
+    text-align: right;
+}
+
+.description p {
+    font-size: 0.9rem;
+    grid-area: desc;
+}
+
+.delivery {
+    position: relative;
+    font-size: 1em;
+    color: var(--primary-green);
+    font-weight: 700;
+    text-decoration: none;
+    margin: 1em 0 0 0;
+    padding: 0.7em;
+    grid-area: link;
+}
+.delivery::after {
+    content: url('./assets/deliveryicon.svg');
+    padding: 0 0 0 0.5em;
+}
+
+/* DESKTOP */
+@media screen and (min-width:768px) {
+    .weekly-specials {
+        width: 100%;
+        padding: 0 15%;
+    }
+    .specialsHeader {
+        padding: 1em 0.5em;
+    }
+    .specials {
+      display: inline-grid;
+      grid-template-columns: auto auto auto;
+      grid-gap: 20px;
+    }
+    .thumbnail {
+      max-height: 150px;
+      overflow: hidden;
+    }
+}

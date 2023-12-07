@@ -24,7 +24,7 @@ export default function Specials() {
         }
     ]
     return (
-        <article>
+        <article className='weekly-specials'>
             <header className='specialsHeader'>
                 <h3>This Week's Specials!</h3>
                 <button type="button">Online Menu</button>
@@ -34,7 +34,7 @@ export default function Specials() {
                     return (
                         <section>
                             <div className='thumbnail'>
-                                <img src={special.img} alt="" />
+                                <img src={special.img} alt={special.item} />
                             </div>
                             <div className='description'>
                                 <h3>{special.item}</h3>

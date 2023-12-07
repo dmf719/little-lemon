@@ -1,0 +1,32 @@
+/* HERO */
+.hero {
+    position: relative;
+    display: grid;
+    grid-template-areas:
+      "herotxt heroimg"
+    ;
+    gap: 0.5em;
+    background-color: var(--primary-green);
+    width: 100%;
+    padding: 2em 1em;
+}
+.hero-text {
+    grid-area: herotxt;
+    align-self: center;
+}
+.hero-text p {
+    color: var(--highlight-white);
+    margin: 1em 0 2em 0;
+}
+.hero-photo {
+    grid-area: heroimg;
+    top: 24px;
+}
+
+@media screen and (min-width: 768px) {
+    .hero {
+        position: relative;
+        width: 100%;
+        padding: 2% 15%;
+    }
+}
