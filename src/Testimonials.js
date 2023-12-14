@@ -32,19 +32,22 @@ export default function Testimonials() {
     ]
     return(
         <article className="testimonials">
-            {reviews.map(review => {
-                return (
-                    <section>
-                        <div>
-                            <img src={review.avatar} className='avatar' alt={review.username} />
-                        </div>
-                        <div>
-                            <h4>{review.username}</h4>
-                            <p>"{review.comment}"</p>
-                        </div>
-                    </section>
-                )
-            })}
+            <h3>Testimonials</h3>
+            <div className='reviews'>
+                {reviews.map(review => {
+                    return (
+                        <section>
+                            <div>
+                                <img src={review.avatar} className='avatar' alt={review.username} />
+                            </div>
+                            <div>
+                                <h4>{review.username}</h4>
+                                <p>"{review.comment}"</p>
+                            </div>
+                        </section>
+                    )
+                })}
+            </div>
         </article>
     )
 }

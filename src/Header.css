@@ -1,5 +1,5 @@
 /* HEADER */
-header {
+.main-header {
     position: relative;
     display: flex;
     flex-direction: column;
@@ -9,7 +9,7 @@ header {
     padding: 1em;
 }
 
-header div {
+.main-header div {
     position: relative;
     width: 100%;
     display: inline-grid;
@@ -37,58 +37,114 @@ header div {
 }
 
 #navbar {
+    position: absolute;
+    width: 100%;
     display: none;
+    background-color: var(--highlight-white);
     transition: all ease 2s;
+    z-index: 99999;
 }
+
 #navbar.show {
-    display: block;
-    height: 280px;
+    display: flex;
+    justify-items: start;
+    top: 70px;
     transition: all ease 2s;
-    animation: drop 1s 1;
+    animation: slide .4s;
 }
-@keyframes drop {
-    from {height: 0px;}
-    to {height: 280px;}
+@keyframes slide {
+    from {left: -100%;}
+    to {left: 0%;}
+}
+#navbar ul {
+  width: 100%;
 }
 #navbar li {
-    text-align: center;
-    margin: .5em 0 1em 0;
+    width: 100%;
+    text-align: left;
+    margin: 1em;
 }
 #navbar li a {
     color: var(--highlight-charcoal);
     font-size: 1.5rem;
     font-weight: 500;
     text-decoration: none;
+    margin: .7em;
 }
 
-/* DESKTOP */
+
+/* TABLET */
 @media screen and (min-width:768px) {
-    header {
+    .main-header {
       width: 100%;
       display: flex;
-      flex-direction: row;
-      justify-content: space-between;
-      padding: 1em 15%;
+      flex-direction: column;
+      justify-content: space-evenly;
+      padding: 1em 10%;
     }
-    header div {
+    .main-header div {
       position: relative;
       width: auto;
       display: flex;
       align-items: center;
       justify-content: space-evenly;
     }
+    .logo {
+      margin: 0 0 1rem 0;
+    }
     .menu, .basket {
       display: none;
     }
     #navbar {
+      position: relative;
       display: flex;
+      width: 100%;
+      justify-content: center;
+      /* border-top: 1px solid #333; */
+    }
+    #navbar.show {
+      display: flex;
+      justify-items: start;
+      top: 0px;
+      transition: all ease 0s;
+    }
+    #navbar ul {
+      width: auto;
     }
     #navbar li {
+      width: auto;
       display: inline-flex;
       justify-content: space-between;
-      margin: 0 0 0 2em;
+      margin: 0;
+      border-bottom: none;
     }
     #navbar li a {
       font-size: 1rem;
-     }
+      padding: 1em 1em 0 0;
+    }
+    #navbar li a:hover {
+      text-decoration: underline;
+    }
+}
+/* DESKTOP */
+@media screen and (min-width:1200px) {
+  .main-header {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    padding: 1em 10%;
+  }
+  #navbar {
+    position: relative;
+    display: flex;
+    justify-content: end;
+  }
+  #navbar li a {
+    font-size: 1rem;
+    padding: 0;
+  }
+  .logo {
+    margin: 0 0 0 0;
+  }
 }

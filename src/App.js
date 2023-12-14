@@ -1,3 +1,4 @@
+import { Routes, Route, Link } from 'react-router-dom';
 import './App.css';
 import './Header.css';
 import './Hero.css';
@@ -6,22 +7,23 @@ import './Testimonials.css';
 import './About.css';
 import './Footer.css';
 import Header from './Header';
-import Hero from './Hero';
-import Specials from './Specials';
+import Home from './Home';
 import Testimonials from './Testimonials';
 import About from './About';
+import BookingPage from './BookingPage';
 import Footer from './Footer';
-
 
 function App() {
   return (
     <>
-      <Header />
-      <Hero />
-      <Specials />
-      <Testimonials />
-      <About />
-      <Footer />
+        <Header />
+        <Routes>
+            <Route path='/' element={<Home />} />
+            <Route path='/Testimonials' element={<Testimonials />} />
+            <Route path='/About' element={<About />} />
+            <Route path='/BookingPage' element={<BookingPage />} />
+        </Routes>
+        <Footer />
     </>
   );
 }

@@ -2,24 +2,39 @@
 .specialsHeader {
     display: flex;
     flex-direction: row;
+    justify-content: space-between;
     background-color: #FFFFFF;
+    padding: 0 0 1rem 0;
+}
+
+.specials {
+    display: flexbox;
 }
 .specials section {
-    display: flexbox;
+    display: flex;
     flex-direction: row;
     margin: 0 0 1em 0;
+    max-height: 200px;
     border-radius: 16px;
     overflow: hidden;
     box-shadow: 0px 2px 5px #a5a5a5;
     background-color: var(--highlight-white);
 }
 .thumbnail {
-    max-height: 250px;
+    position: relative;
+    width: 100%;
     overflow: hidden;
+}
+.thumbnail img {
+    display: flex;
+    width: 200%;
+    left: -40%;
+    justify-self: center;
 }
 
 .specials .description {
     display: grid;
+    width: 100%;
     grid-template-rows: 20% 50% 30%;
     grid-template-columns: 80% 20%;
     grid-template-areas:
@@ -29,13 +44,12 @@
     ;
     justify-content: space-around;
     align-items: center;
-    min-height: 220px;
-    padding: 1em;
+    padding: .5em 1rem;
 }
 
 .description h3 {
     position: relative;
-    font-size: 1.8em;
+    font-size: 1.5em;
     grid-area: name;
 }
 .price {
@@ -56,8 +70,8 @@
     color: var(--primary-green);
     font-weight: 700;
     text-decoration: none;
-    margin: 1em 0 0 0;
-    padding: 0.7em;
+    margin: .25em 0 0 0;
+    padding: 0.7em 0;
     grid-area: link;
 }
 .delivery::after {
@@ -65,22 +79,68 @@
     padding: 0 0 0 0.5em;
 }
 
-/* DESKTOP */
+/* TABLET */
 @media screen and (min-width:768px) {
     .weekly-specials {
         width: 100%;
-        padding: 0 15%;
     }
     .specialsHeader {
         padding: 1em 0.5em;
     }
     .specials {
-      display: inline-grid;
-      grid-template-columns: auto auto auto;
-      grid-gap: 20px;
+      display: grid;
+      grid-template-columns: auto;
+      grid-gap: 2%;
     }
-    .thumbnail {
-      max-height: 150px;
-      overflow: hidden;
+    .specials section {
+        display: flex;
+        margin: 0 0 1em 0;
+        border-radius: 16px;
+        overflow: hidden;
+        box-shadow: 0px 2px 5px #a5a5a5;
+        background-color: var(--highlight-white);
+    }
+    .specials .description {
+        display: grid;
+        grid-template-rows: 20% 50% 30%;
+        grid-template-columns: 80% 20%;
+        grid-template-areas:
+            "name price"
+            "desc desc"
+            "link link"
+        ;
+        justify-content: space-around;
+        align-items: center;
+        min-height:0px;
+        padding: 1em;
+    }
+    .thumbnail img {
+      top: -80%;
+    }
+}
+@media screen and (min-width: 1200px) {
+    .specialsHeader {
+        padding: 1em 15%;
+    }
+    .specials {
+        display: grid;
+        grid-template-columns: 30% 30% 30%;
+        grid-gap: 5%;
+        padding: 0 15%;
+      }
+      .specials section {
+          display: grid;
+          margin: 0 0 1em 0;
+          max-height: 500px;
+          border-radius: 16px;
+          overflow: hidden;
+          box-shadow: 0px 2px 5px #a5a5a5;
+          background-color: var(--highlight-white);
+      }
+      .thumbnail {
+        position: relative;
+        width: 100%;
+        max-height: 280px;
+        overflow: hidden;
     }
 }

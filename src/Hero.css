@@ -27,6 +27,12 @@
     .hero {
         position: relative;
         width: 100%;
+        padding: 1em;
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    .hero {
         padding: 2% 15%;
     }
 }

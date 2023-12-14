@@ -71,7 +71,8 @@
           "txt img";
         gap: 20px;
         color: var(--highlight-white);
-        padding: 2em 15%;
+        padding: 2em;
+        overflow: hidden;
     }
     #about1 {
         position: absolute;
@@ -94,5 +95,11 @@
         box-shadow: 0px 2px 6px #000;
         padding: 10px;
         z-index: 99999;
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    #about {
+        padding: 2em 14%;
     }
 }

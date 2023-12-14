@@ -52,6 +52,9 @@ p {
   font-size: 1.1em;
   padding: 0.5em 0 0.5em 0;
 }
+a {
+  color: var(--primary-green);
+}
 li {
   list-style-type: none;
 }
