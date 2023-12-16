@@ -19,6 +19,10 @@
   --markazi: "Markazi Text", serif;
 }
 
+::selection {
+  background: var(--secondary-salmon);
+}
+
 body{
   font-family: var(--karla);
 }

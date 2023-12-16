@@ -1,4 +1,4 @@
-import { Routes, Route, Link } from 'react-router-dom';
+import { Routes, Route } from 'react-router-dom';
 import './App.css';
 import './Header.css';
 import './Hero.css';
@@ -6,6 +6,7 @@ import './Specials.css';
 import './Testimonials.css';
 import './About.css';
 import './Footer.css';
+import './Booking.css';
 import Header from './Header';
 import Home from './Home';
 import Testimonials from './Testimonials';
@@ -16,6 +17,7 @@ import Footer from './Footer';
 function App() {
   return (
     <>
+        {/* */}
         <Header />
         <Routes>
             <Route path='/' element={<Home />} />
