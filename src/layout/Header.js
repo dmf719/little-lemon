@@ -1,6 +1,6 @@
-import Logo from './assets/Logo.svg';
-import Hamburger from './assets/hamburgerMenu.svg';
-import Basket from './assets/basket .svg';
+import Logo from '../assets/Logo.svg';
+import Hamburger from '../assets/hamburgerMenu.svg';
+import Basket from '../assets/basket .svg';
 import Nav from './Nav';
 import { Link } from 'react-router-dom';
 
@@ -19,7 +19,7 @@ export default function Header() {
           <li><Link to="/">Menu</Link></li>
           <li><Link to="/BookingPage">Reservations</Link></li>
           <li><Link to="/">Order Online</Link></li>
-          <li><Link to="/" style={{ color: "var(--highlight-white)", background: "var(--secondary-salmon)", borderRadius: "16px", padding: "0.25em 0.75em" }}>Login</Link></li>
+          <li><Link to="/Login" style={{ color: "var(--highlight-white)", background: "var(--secondary-salmon)", borderRadius: "16px", padding: "0.25em 0.75em" }}>Login</Link></li>
         </ul>
       </nav>
     </header>

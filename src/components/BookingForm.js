@@ -1,19 +1,9 @@
-import { useState } from "react";
 
-export default function BookingForm() {
-    const [date, setDate] = useState();
-    const [time, setTime] = useState();
-    const [guests, setGuests] = useState();
-    const [occasion, setOccasion] = useState();
-
+export default function BookingForm({ setDate, setTime, setGuests, setOccasion }) {
     const handleSubmit = (e) => {
         e.preventDefault();
 
         console.log("Submitted");
-        console.log(date)
-        console.log(time)
-        console.log(guests)
-        console.log(occasion)
     }
     return (
         <form onSubmit={handleSubmit}>
@@ -21,9 +11,11 @@ export default function BookingForm() {
             <div>
                 <label htmlFor="res-date">Choose date</label>
                 <input
-                    type="date"
                     id="res-date"
-                    onChange={(e) => setDate(e.target.value)}
+                    type="date"
+                    onChange={(e) => e.target.value}
+                    aria-label="Reservation Date"
+                    value={setDate}
                 />
             </div>
 
@@ -32,9 +24,11 @@ export default function BookingForm() {
                 <label htmlFor="res-time">Choose time</label>
                 <select
                     id="res-time"
-                    onChange={(e) => setTime(e.target.value)}
+                    onChange={(e) => e.target.value}
+                    aria-label="Reservation Time"
+                    value={setTime}
                 >
-                    <option>5:00</option>
+                    <option selected>5:00</option>
                     <option>6:00</option>
                     <option>7:00</option>
                     <option>8:00</option>
@@ -47,12 +41,13 @@ export default function BookingForm() {
             <div>
                 <label htmlFor="guests">Number of guests</label>
                 <input
+                    id="guests"
                     type="number"
                     placeholder="1"
                     min="1"
                     max="10"
-                    id="guests"
-                    onChange={(e) => setGuests(e.target.value)}
+                    onChange={(e) => e.target.value}
+                    aria-label="Number of Guests"
                 />
             </div>
 
@@ -61,14 +56,15 @@ export default function BookingForm() {
                 <label htmlFor="occasion">Occasion</label>
                 <select
                     id="occasion"
-                    onChange={(e) => setOccasion(e.target.value)}
+                    onChange={(e) => e.target.value}
+                    aria-label="Occasion"
                 >
                     <option>Birthday</option>
                     <option>Anniversary</option>
                 </select>
             </div>
 
-            <input type="submit" value="Make Your Reservation" />
+            <input type="submit" value="Make Your Reservation" aria-label="Make Your Reservation" />
         </form>
     )
 }

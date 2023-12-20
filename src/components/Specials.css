@@ -75,7 +75,7 @@
     grid-area: link;
 }
 .delivery::after {
-    content: url('./assets/deliveryicon.svg');
+    content: url('../assets/deliveryicon.svg');
     padding: 0 0 0 0.5em;
 }
 
@@ -113,9 +113,6 @@
         align-items: center;
         min-height:0px;
         padding: 1em;
-    }
-    .thumbnail img {
-      top: -80%;
     }
 }
 @media screen and (min-width: 1200px) {

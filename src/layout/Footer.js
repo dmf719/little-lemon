@@ -1,6 +1,7 @@
- import Logo2 from './assets/logo2.png'
+import { Link } from 'react-router-dom';
+import Logo2 from '../assets/logo2.png';
 
- function Footer(){
+function Footer() {
     const socialMedia = [
         {
             platform: "Facebook",
@@ -25,11 +26,11 @@
                 <li>
                     <h4>NAVIGATION</h4>
                 </li>
-                <li style={{ marginTop: "1rem" }}><a href="">Home</a></li>
-                <li><a href="">About</a></li>
-                <li><a href="">Menu</a></li>
-                <li><a href="">Order Online</a></li>
-                <li><a href="">Make a Reservation</a></li>
+                <li style={{ marginTop: "1rem" }}><Link to="/">Home</Link></li>
+                <li><Link to="./About">About</Link></li>
+                <li><Link to="">Menu</Link></li>
+                <li><Link to="">Order Online</Link></li>
+                <li><Link to="./BookingPage">Make a Reservation</Link></li>
             </ul>
 
             <ul className="contact">
@@ -39,7 +40,7 @@
                 <li style={{ marginTop: "1rem" }}>123 Main St.</li>
                 <li>Chicago, IL</li>
                 <li style={{ marginTop: "1rem" }}>(123) 456-7890</li>
-                <li style={{ marginTop: "1rem" }}><a href=''>info@littlelemon.com</a></li>
+                <li style={{ marginTop: "1rem" }}><Link to='mailto:info@littlelemon.com'>info@littlelemon.com</Link></li>
             </ul>
 
             <ul className="social">
@@ -50,17 +51,17 @@
                     {socialMedia.map(social => {
                         return (
                             <li>
-                                <a href={social.url} title={social.platform}>
+                                <Link to={social.url} title={social.platform}>
                                     <box-icon color="#495E57" name={social.icon} type="logo"></box-icon>
-                                </a>
+                                </Link>
                             </li>
                         )
                     })}
                 </div>
             </ul>
-            <p>Copyright &copy; 2023 Little Lemon</p>
+            <p className='copyright'>Copyright &copy; 2023 Little Lemon</p>
         </footer>
     )
- }
+}
 
- export default Footer
+export default Footer

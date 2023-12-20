@@ -1,5 +1,5 @@
-import MarioAndAdrian from './assets/MarioandAdrian.jpg';
-import Adrian from './assets/adrian.jpg';
+import MarioAndAdrian from '../assets/MarioandAdrian.jpg';
+import Adrian from '../assets/adrian.jpg';
 
 export default function About() {
     return (

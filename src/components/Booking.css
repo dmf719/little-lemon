@@ -32,7 +32,7 @@ select {
     border: 1px solid #ebebeb;
     border-radius: 8px;
     box-shadow: 2px 2px 8px #333;
-    padding: 1em;
+    padding: .75em;
     margin-top: .5em;
     cursor: pointer;
 }
@@ -48,7 +48,7 @@ input {
     border: 1px solid #ebebeb;
     border-radius: 8px;
     box-shadow: 2px 2px 8px #333;
-    padding: 1em;
+    padding: .75em;
     margin-top: .5em;
     cursor: pointer;
 }
@@ -67,7 +67,7 @@ input[type=submit] {
     form {
         width: 100%;
         display: grid;
-        grid-template-columns: repeat(2, 40%);
+        grid-template-columns: repeat(1, 50%);
         justify-content: space-around;
         align-items: center;
         gap: 1rem;

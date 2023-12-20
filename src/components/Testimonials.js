@@ -1,7 +1,7 @@
-import Mike from './assets/mike.jpg';
-import Samantha from './assets/samantha.jpg';
-import Julie from './assets/julie.jpg';
-import Eric from './assets/eric.jpg';
+import Mike from '../assets/mike.jpg';
+import Samantha from '../assets/samantha.jpg';
+import Julie from '../assets/julie.jpg';
+import Eric from '../assets/eric.jpg';
 
 export default function Testimonials() {
     const reviews = [
