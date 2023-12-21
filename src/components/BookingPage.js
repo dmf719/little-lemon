@@ -1,35 +1,30 @@
-import { useState, useReducer } from "react";
+import { useState } from "react";
 import BookingForm from './BookingForm';
 
 export default function BookingPage() {
-    const [date, setDate] = useState();
-    const [time, setTime] = useState();
-    const [guests, setGuests] = useState();
-    const [occasion, setOccasion] = useState();
 
-    // const [state, dispatch] = useReducer(reducer, {
-    //     date: '',
-    //     time: '',
-    //     guests: 1,
-    //     occasion: ''
-    // })
+    const [formData, setFormData] = useState({
+        date: "",
+        time: "",
+        guests: "",
+        occasion: "",
+    })
+    const handleSubmit = (e) => {
+        e.preventDefault();
 
-    // function reducer(state, action) {
-    //     switch(action.type) {
-    //         case "set_date": {
-
-    //         }
-    //     }
-    // }
+        console.log(formData.occasion, formData.date, formData.time, formData.guests);
+    }
 
     return (
         <section id="booking">
             <h2>Reserve a Table</h2>
             <BookingForm
-                date={date}
-                time={time}
-                guests={guests}
-                occasion={occasion}
+                date={formData.date}
+                time={formData.time}
+                guests={formData.guests}
+                occasion={formData.occasion}
+                onChange={(c) => setFormData({ ...formData, [c.target.name]: c.target.value })}
+                onSubmit={handleSubmit}
             />
         </section>
     )
