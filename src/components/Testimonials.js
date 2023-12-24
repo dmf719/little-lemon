@@ -30,9 +30,12 @@ export default function Testimonials() {
             comment: "Good food, good people!",
         },
     ]
-    return(
+    return (
         <article className="testimonials">
-            <h3>Testimonials</h3>
+            <header className='testimonialsHeader'>
+                <h3>Testimonials</h3>
+            </header>
+
             <div className='reviews'>
                 {reviews.map(review => {
                     return (

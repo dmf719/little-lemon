@@ -10,6 +10,10 @@
     padding: 1em;
 }
 
+#login form {
+    max-width: 300px;
+}
+
 #login label {
     color: var(--highlight-white);
 }

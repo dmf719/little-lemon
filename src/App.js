@@ -12,6 +12,7 @@ import Header from './layout/Header';
 import Home from './components/Home';
 import About from './components/About';
 import BookingPage from './components/BookingPage';
+import ReservationConfirmed from './components/ReservationConfirmed';
 import Login from './components/Login';
 import Footer from './layout/Footer';
 
@@ -24,6 +25,7 @@ function App() {
             <Route path='/About' element={<About />} />
             <Route path='/BookingPage' element={<BookingPage />} />
             <Route path='/Login' element={<Login />} />
+            <Route path='/Confirmed' element={<ReservationConfirmed />} />
         </Routes>
         <Footer />
     </main>

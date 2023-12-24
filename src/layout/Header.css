@@ -107,6 +107,7 @@
       justify-items: start;
       top: 0px;
       transition: all ease 0s;
+      animation: none;
     }
     #navbar ul {
       width: auto;

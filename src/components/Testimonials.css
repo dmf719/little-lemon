@@ -6,6 +6,13 @@
     padding: 2rem;
 }
 
+.testimonialsHeader {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 0 0 1rem 0;
+}
+
 .testimonials section {
     position: relative;
     background: #FFFFFF;
@@ -31,6 +38,9 @@
 
 /* TABLET */
 @media screen and (min-width: 768px) {
+    .testimonialsHeader {
+        padding: 1em 0.5em;
+    }
     .testimonials {
         padding: 2rem;
     }
@@ -49,5 +59,8 @@
 @media screen and (min-width: 1200px) {
     .testimonials {
         padding: 2rem 15%;
+    }
+    .testimonialsHeader {
+        padding: 1em;
     }
 }
