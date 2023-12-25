@@ -6,17 +6,20 @@ function Footer() {
         {
             platform: "Facebook",
             url: "https://facebook.com",
-            icon: "facebook-circle"
+            icon: "facebook-circle",
+            key: "fb",
         },
         {
             platform: "Instagram",
             url: "https://instagram.com",
             icon: "instagram",
+            key: "ig",
         },
         {
             platform: "TikTok",
             url: "https://tiktok.com",
             icon: "tiktok",
+            key: "tik",
         }
     ]
     return (
@@ -52,7 +55,7 @@ function Footer() {
                         {socialMedia.map(social => {
                             return (
                                 <li>
-                                    <Link to={social.url} title={social.platform}>
+                                    <Link to={social.url} title={social.platform} key={social.key}>
                                         <box-icon color="#495E57" name={social.icon} type="logo"></box-icon>
                                     </Link>
                                 </li>

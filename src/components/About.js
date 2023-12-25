@@ -8,6 +8,8 @@ export default function About() {
             <div className='about-text'>
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc sapien erat, posuere ut nisi ac, finibus facilisis urna. Praesent a est nec lacus ultrices varius ut vel mauris.</p>
                 <p>Quisque mattis lacus et magna facilisis, nec posuere neque venenatis. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc sapien erat, posuere ut nisi ac, finibus facilisis urna. Praesent a est nec lacus ultrices varius ut vel mauris.</p>
+                <p>Quisque mattis lacus et magna facilisis, nec posuere neque venenatis. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
             </div>
             <div className='about-photo'>
                 <img id="about1" src={Adrian} alt="Adrian of Little Lemon" />

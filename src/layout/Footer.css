@@ -3,7 +3,7 @@ footer {
     width: 100%;
     padding: 1em;
 }
-footer div{
+footer > div{
     position: relative;
     display: grid;
     grid-template-columns: 1fr;
@@ -34,10 +34,15 @@ footer a {
     justify-items: center;
     margin: 1rem 0 2.5rem 0;
 }
+.copyright {
+    position: relative;
+    width: 100%;
+    text-align: center;
+}
 
 /* DESKTOP */
 @media screen and (min-width:768px) {
-    footer div{
+    footer > div{
         position: relative;
         display: grid;
         grid-template-columns: repeat(4, 1fr);
@@ -45,7 +50,7 @@ footer a {
         align-items: start;
         background-color: var(--highlight-white);
         width: 100%;
-        padding: 1em;
+        padding: 1em 15%;
     }
     .footer-nav {
         margin: 1rem 0 2.5rem 0;
@@ -59,10 +64,13 @@ footer a {
     .social {
         margin: 1rem 0 2.5rem 0;
     }
-    .social div ul {
+
+    .social div {
         display: grid;
         grid-template-columns: repeat(3, 1fr);
-        justify-items: center;
+        justify-content: center;
+        align-items: center;
+        gap: .5em;
     }
     .copyright {
         position: relative;

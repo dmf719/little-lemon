@@ -7,7 +7,7 @@ export default function ReservationConfirmed() {
             <header>
                 <h2>Your table has been reserved!</h2>
             </header>
-            <p>You're all set! We will send you an email to confirm your reservation.</p>
+            <h4>You're all set! Check your email to confirm your reservation.</h4>
         </section>
     )
 }

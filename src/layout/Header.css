@@ -37,6 +37,10 @@
 }
 
 #navbar {
+  display: none;
+}
+
+#navMenu {
     position: absolute;
     width: 100%;
     display: none;
@@ -45,7 +49,7 @@
     z-index: 99999;
 }
 
-#navbar.show {
+#navMenu.show {
     display: flex;
     justify-items: start;
     top: 70px;
@@ -56,15 +60,15 @@
     from {left: -100%;}
     to {left: 0%;}
 }
-#navbar ul {
+#navMenu ul {
   width: 100%;
 }
-#navbar li {
+#navMenu li {
     width: 100%;
     text-align: left;
     margin: 1em;
 }
-#navbar li a {
+#navMenu li a {
     color: var(--highlight-charcoal);
     font-size: 1.5rem;
     font-weight: 500;
@@ -95,19 +99,14 @@
     .menu, .basket {
       display: none;
     }
+    #navMenu, #navMenu.show {
+      display: none;
+    }
     #navbar {
       position: relative;
       display: flex;
       width: 100%;
       justify-content: center;
-      /* border-top: 1px solid #333; */
-    }
-    #navbar.show {
-      display: flex;
-      justify-items: start;
-      top: 0px;
-      transition: all ease 0s;
-      animation: none;
     }
     #navbar ul {
       width: auto;
@@ -120,8 +119,12 @@
       border-bottom: none;
     }
     #navbar li a {
-      font-size: 1rem;
       padding: 1em 1em 0 0;
+      color: var(--highlight-charcoal);
+      font-size: 1rem;
+      font-weight: 500;
+      text-decoration: none;
+      margin: .7em;
     }
     #navbar li a:hover {
       text-decoration: underline;

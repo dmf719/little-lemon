@@ -10,12 +10,12 @@ export default function Header() {
 
   function showHide() {
     if (navMenu === "hide") {
-      document.querySelector("#navbar").classList.add("show");
+      document.querySelector("#navMenu").classList.toggle("show");
       document.querySelector(".menu").src = xCircle;
       setNavMenu("show");
     }
     else if (navMenu === "show") {
-      document.querySelector("#navbar").classList.remove("show");
+      document.querySelector("#navMenu").classList.toggle("show");
       document.querySelector(".menu").src = Hamburger;
       setNavMenu("hide");
     }
@@ -29,6 +29,16 @@ export default function Header() {
         <img className="basket" src={Basket} alt="Basket" />
       </div>
       <nav id="navbar">
+        <ul>
+          <li><Link to="/">Home</Link></li>
+          <li><Link to="/about">About</Link></li>
+          <li><Link to="/">Menu</Link></li>
+          <li><Link to="/BookingPage">Reservations</Link></li>
+          <li><Link to="/">Order Online</Link></li>
+          <li><Link to="/Login" style={{ color: "var(--highlight-white)", background: "var(--secondary-salmon)", borderRadius: "16px", padding: "0.25em 0.75em" }}>Login</Link></li>
+        </ul>
+      </nav>
+      <nav id="navMenu">
         <ul>
           <li><Link to="/" onClick={showHide}>Home</Link></li>
           <li><Link to="/about" onClick={showHide}>About</Link></li>
