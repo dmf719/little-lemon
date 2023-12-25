@@ -1,7 +1,7 @@
 import { useState, useReducer, useEffect } from "react";
 import BookingForm from './BookingForm';
 import { fetchAPI } from '../MockAPI';
-import { useNavigate } from "react-router-dom";
+import { Route, useNavigate } from "react-router-dom";
 
 
 export default function BookingPage() {
@@ -16,7 +16,7 @@ export default function BookingPage() {
     const [formData, setFormData] = useState(initialValues);
     const [formError, setFormError] = useState({});
     const [submitted, setSubmitted] = useState(false);
-    const redirect = useNavigate();
+    const navigate = useNavigate();
 
     const handleChange = (c) => {
         setFormData({ ...formData, [c.target.name]: c.target.value })
@@ -56,7 +56,7 @@ export default function BookingPage() {
     useEffect(() => {
         if (Object.keys(formError).length === 0 && submitted) {
             console.log(formData)
-            redirect('/Confirmed')
+            navigate('/Confirmed')
         }
     }, [formError])
 
@@ -92,7 +92,6 @@ export default function BookingPage() {
 
     return (
         <section id="booking">
-            <h2>Reserve a Table</h2>
             <BookingForm
                 name={formData.name}
                 email={formData.email}

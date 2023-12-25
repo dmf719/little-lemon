@@ -1,12 +1,14 @@
 footer {
+    background-color: var(--highlight-white);
+    width: 100%;
+    padding: 1em;
+}
+footer div{
     position: relative;
     display: grid;
     grid-template-columns: 1fr;
     justify-items: center;
     align-items: center;
-    background-color: var(--highlight-white);
-    width: 100%;
-    padding: 1em;
 }
 footer a {
     color: var(--secondary-salmon);
@@ -35,7 +37,7 @@ footer a {
 
 /* DESKTOP */
 @media screen and (min-width:768px) {
-    footer {
+    footer div{
         position: relative;
         display: grid;
         grid-template-columns: repeat(4, 1fr);
@@ -65,5 +67,6 @@ footer a {
     .copyright {
         position: relative;
         width: 100%;
+        text-align: center;
     }
 }

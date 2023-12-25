@@ -4,6 +4,7 @@ export default function BookingForm({ name, email, date, update, time, reservati
 
     return (
         <form onSubmit={onSubmit}>
+            <h2>Reserve a Table</h2>
             <div>
                 <label htmlFor="name">Name</label>
                 <input

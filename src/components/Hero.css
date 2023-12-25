@@ -13,6 +13,7 @@
 .hero-text {
     grid-area: herotxt;
     align-self: center;
+    padding: 0 20px 0 0;
 }
 .hero-text p {
     color: var(--highlight-white);

@@ -9,14 +9,15 @@ export default function Header() {
   const [navMenu, setNavMenu] = useState("hide");
 
   function showHide() {
-    document.querySelector("#navbar").classList.toggle("show")
     if (navMenu === "hide") {
-      document.querySelector(".menu").src = xCircle
-      setNavMenu("show")
+      document.querySelector("#navbar").classList.add("show");
+      document.querySelector(".menu").src = xCircle;
+      setNavMenu("show");
     }
     else if (navMenu === "show") {
-      document.querySelector(".menu").src = Hamburger
-      setNavMenu("hide")
+      document.querySelector("#navbar").classList.remove("show");
+      document.querySelector(".menu").src = Hamburger;
+      setNavMenu("hide");
     }
   }
 
